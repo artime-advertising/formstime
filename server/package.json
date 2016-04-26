@@ -1,0 +1,20 @@
+{
+  "name": "formstime-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/coffee src/index.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "coffee-script": "^1.10.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "lodash": "^4.11.1",
+    "node-mailjet": "^1.1.0"
+  }
+}

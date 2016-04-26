@@ -30,6 +30,8 @@ $('#form').formsTime({resetAfterSuccess: true});
 
                 $.post(formsTimeServer, serializedForm)
                     .done(function(resp) {
+                        $(self).trigger('submit:done');
+
                         if (settings.resetAfterSuccess) {
                             $(self).trigger('reset');
                         }
@@ -39,10 +41,14 @@ $('#form').formsTime({resetAfterSuccess: true});
                         }
                     })
                     .fail(function(resp) {
+                        $(self).trigger('submit:fail');
                         if (settings.message.show) {
                             alert(settings.message.fail);
                         }
-                    });
+                    })
+                    .always(function() {
+                        $(self).trigger('submit:always');
+                    })
             });
 
         });
