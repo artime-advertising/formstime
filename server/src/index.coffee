@@ -7,6 +7,7 @@ port = process.env['PORT'] or 3000
 
 app.use cors()
 app.use '/mailer/', mailer
+app.use '/files', express.static('../../client/src')
 
 app.listen port, () ->
     console.log "Listening to port #{port}"
