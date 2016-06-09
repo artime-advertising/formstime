@@ -8,7 +8,7 @@ $('#form').formsTime({resetAfterSuccess: true});
  */
 
 (function($) {
-    var formsTimeServer = 'https://formstime.herokuapp.com';
+    var formsTimeServer = 'https://formstime.herokuapp.com/mailer';
 
     $.fn.formsTime = function(options) {
 
